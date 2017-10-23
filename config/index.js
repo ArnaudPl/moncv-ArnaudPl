@@ -6,7 +6,7 @@ module.exports = {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'moncv-ArnaudPl/static',
     assetsPublicPath: '/moncv-ArnaudPl',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
