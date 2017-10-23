@@ -1,0 +1,37 @@
+body {
+    /* Obligatoire pour la fixed navbar */
+    padding-top: 70px;
+}
+
+.parallax {
+    min-height: 400px;
+    height: 80vh;
+    max-height: 1080px;
+    background: transparent;
+}
+
+.with-padding-bot {
+    padding-bottom: 1em;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3em;
+    margin: 2rem 0;
+}
+
+.section-title::before, .section-title::after {
+    content: ' - ';
+}
+
+.presentation-text {
+    text-align: justify;
+}
+
+.presentation-text div {
+    margin-bottom: .5em;
+}
+
+.progress-title {
+    text-align: center;
+}
