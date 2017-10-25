@@ -14,6 +14,14 @@ $(document).ready(function () {
         $(this).addClass('progress-bar-' + colorClasses[Math.floor(Math.random() * colorClasses.length)]);
     });
 
+    $('.nav li a').click(function () {
+        $('.nav li').each(function () {
+            $(this).removeClass('active');
+        });
+
+        $(this).parent().addClass('active');
+    });
+
     // Scrollspy
     /*
     $('.section-title').each(function () {
