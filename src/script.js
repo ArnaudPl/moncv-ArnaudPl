@@ -1,8 +1,7 @@
-var $ = require('jquery');
-
+// let scrollspy = require('scrollspy');
 $(document).ready(function () {
     // Met en place les paramètres des progress-bars
-    var colorClasses = ['success', 'info', 'warning', 'danger'];
+    let colorClasses = ['success', 'info', 'warning', 'danger'];
 
     $('.progress-bar').each(function () {
         let percent = $(this).attr('aria-valuenow') + '%';
@@ -14,29 +13,27 @@ $(document).ready(function () {
         $(this).addClass('progress-bar-' + colorClasses[Math.floor(Math.random() * colorClasses.length)]);
     });
 
-    $('.nav li a').click(function () {
-        $('.nav li').each(function () {
-            $(this).removeClass('active');
-        });
-
-        $(this).parent().addClass('active');
-    });
+    // Smooth scroll
+    // $('.navbar-nav li a').smoothscroll();
 
     // Scrollspy
     /*
     $('.section-title').each(function () {
-        let that = this;
-        let id = 'presentation';
+        let me = this;
+        let id = $(me).attr('id');
 
-        scrollspy.add(that, {
+        scrollspy.add(me, {
             scrollIn: function () {
-                addActiveToMenuItemReferingId(id);
+                toggleActiveToMenuItemReferingId(id);
+            },
+            scrollOut: function () {
+                toggleActiveToMenuItemReferingId(id);
             }
         });
     });
 
-    function addActiveToMenuItemReferingId (id) {
-        $('.navbar-nav li').find('a[href$="' + id + '"]').parent().addClass('active');
+    function toggleActiveToMenuItemReferingId (id) {
+        $('.navbar-nav li').find('a[href$="' + id + '"]').parent().toggleClass('active');
     }
     */
 });
