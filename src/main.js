@@ -27,6 +27,7 @@ $(document).ready(() => {
 
     // Si js est activé, on remplace toutes les progress par ChartJS
     const chartTag = '<canvas class="progress-chartjs"></canvas>';
+    // eslint-disable-next-line
     let charts;
     let colors = ['red', 'green', 'yellow', 'purple', 'blue'];
     $('.progress').each(function () {
@@ -42,11 +43,16 @@ $(document).ready(() => {
             data: {
                 datasets: [{
                     data: data,
-                    backgroundColor: [colors[Math.floor(Math.random() * colorClasses.length)], 'transparent']
+                    backgroundColor: [colors[Math.floor(Math.random() * colorClasses.length)], 'transparent'],
+                    hoverBorderColor: ['transparent', 'transparent']
                 }]
+            },
+            options: {
+                tooltips: {
+                    enabled: false
+                }
             }
         });
     });
-    console.log(charts);
 });
 
