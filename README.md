@@ -1,21 +1,62 @@
-# moncv
+# moncv-ArnaudPl
 
-> A Vue.js project
+> Réalisation d'un CV avec l'utilisation de webpacke et jQuery dans le cadre du cours Projet de Technologies Web donné par M. Fritscher
 
-## Build Setup
+## Installation
 
 ``` bash
-# install dependencies
+# installer toutes les dépendences
 npm install
 
-# serve with hot reload at localhost:8080
+# lancer le serveur local avec rafraîchissement automatique à l'adresse localhost:8080
 npm run dev
 
-# build for production with minification
+# build pour la production
 npm run build
 
-# build for production and view the bundle analyzer report
+# build pour la production avec un rapport d'analyse
 npm run build --report
+
+# déployer sur la branche gh-pages de l'association HEG-Web sur Github visible à l'adresse heg-web.github.io/moncv-ArnaudPl (tous les fichiers doivent avoir été commit)
+npm run deploy
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Technologies utilisées
+
+- [Vue-cli](https://www.npmjs.com/package/vue-cli)
+    - Installation du package
+        - ```$ npm i -g vue-cli```
+    - Initialiser le projet (scaffold) avec le template webpack
+        - ```$ vue init webpack moncv```
+        - Répondre aux différentes questions selon les préférences
+- [bootstrap v3.3](https://getbootstrap.com/docs/3.3/) sans dépendance jQuery
+    - [bootstrap.native](https://www.npmjs.com/package/bootstrap.native)
+        - Installation du package
+            - ```$ npm i bootstrap.native@3.3.7 --save```
+    - [bootstrap-only-css](https://www.npmjs.com/package/bootstrap-only-css)
+        - Installation du package
+            - ```$ npm i bootstrap-only-css --save```
+    - Importer bootstrap.native et bootstrap-only-css dans le projet
+        - Ajouter ces deux lignes au fichier moncv/src/main.js
+            - ```import 'bootstrap.native';```
+            - ```import 'bootstrap-css-only/css/bootstrap.min.css';```
+- [jQuery](https://www.npmjs.com/package/jquery)
+    - Installation du package
+        - ```npm i jquery --save```
+    - Charger jQuery partout pour éviter de devoir l'importer sur chaque script
+        - Ajouter ```plugins: [ new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }) ],``` dans le fichier moncv/build/webpack.base.conf.js
+- [push-dir](https://www.npmjs.com/package/push-dir)
+    - Installation du package
+        - ```$ npm i push-dir --save-dev```
+    - Ajouter le script pour envoyer sur la branch gh-pages au fichier package.json
+        - ```"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",```
+- [Timeline.css](https://codepen.io/brady_wright/pen/NNOvrW)
+- [Chart.js](https://www.npmjs.com/package/chart.js)
+    - Installation du package
+        - ```npm install chart.js --save```
+    - Importer le package dans moncv/src/main.js
+        - ```import Chart from 'chart.js';```
+
+
+
+
