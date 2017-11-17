@@ -1,8 +1,8 @@
 # moncv-ArnaudPl
 
-> Réalisation d'un CV avec l'utilisation de webpack et jQuery dans le cadre du cours Projet de Technologies Web donné par M. Fritscher
+> Réalisation d'un CV avec l'utilisation de webpack et jQuery dans le cadre du cours *Projet de Technologies Web* donné par M. Fritscher. Le CV est visible à [cette adresse](https://heg-web.github.io/moncv-ArnaudPl).
 
-## Installation
+## Installation du projet
 
 ``` bash
 # installer toutes les dépendences
@@ -21,7 +21,7 @@ npm run build --report
 npm run deploy
 ```
 
-## Technologies utilisées
+## Technologies utilisées et configurations réalisées
 
 - [Vue-cli](https://www.npmjs.com/package/vue-cli)
     - Installation du package
@@ -29,6 +29,32 @@ npm run deploy
     - Initialiser le projet (scaffold) avec le template webpack
         - ```$ vue init webpack moncv```
         - Répondre aux différentes questions selon les préférences
+    - Suppression de VueJs car on ne l'utilise pas de ce projet
+        - ```$ npm un vue --save```
+- Configuration d'ESLint
+    - Ajouter ces lignes au fichier .eslintrc.js
+``` bash
+{
+  ...,
+  "rules": {
+    // enforce semi
+    "semi":  ["error", "always"],
+    // use 4 spaces indent
+    "indent": ["error", 4],
+    // make rule equal vs code auto formatting
+    "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "never"
+    }],
+    ...
+  },
+  ...
+}
+```
+- Corriger la configuration de webpack pour le debug
+    - Remplacer cette ligne dans le fichier build/webpack.dev.conf : ```devtool: 'source-map',```
+- Utiliser des LF aussi sur Windows
+    - Créer le fichier .gitattributes à la racine du projet avec ce contenu : ```* text eol=lf```
 - [bootstrap v3.3](https://getbootstrap.com/docs/3.3/) sans dépendance jQuery
     - [bootstrap.native](https://www.npmjs.com/package/bootstrap.native)
         - Installation du package
