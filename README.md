@@ -6,19 +6,19 @@
 
 ``` bash
 # installer toutes les dépendences
-npm install
+$ npm install
 
 # lancer le serveur local avec rafraîchissement automatique à l'adresse localhost:8080
-npm run dev
+$ npm run dev
 
 # build pour la production
-npm run build
+$ npm run build
 
 # build pour la production avec un rapport d'analyse
-npm run build --report
+$ npm run build --report
 
 # déployer sur la branche gh-pages de l'association HEG-Web sur Github visible à l'adresse heg-web.github.io/moncv-ArnaudPl (tous les fichiers doivent avoir été commit)
-npm run deploy
+$ npm run deploy
 ```
 
 ## Technologies utilisées et configurations réalisées
@@ -68,7 +68,7 @@ npm run deploy
             - ```import 'bootstrap-css-only/css/bootstrap.min.css';```
 - [jQuery](https://www.npmjs.com/package/jquery)
     - Installation du package
-        - ```npm i jquery --save```
+        - ```$ npm i jquery --save```
     - Charger jQuery partout pour éviter de devoir l'importer sur chaque script
         - Ajouter ```plugins: [ new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }) ],``` dans le fichier moncv/build/webpack.base.conf.js
 - [push-dir](https://www.npmjs.com/package/push-dir)
@@ -79,17 +79,17 @@ npm run deploy
 - [Timeline.css](https://codepen.io/brady_wright/pen/NNOvrW)
 - [Chart.js](https://www.npmjs.com/package/chart.js)
     - Installation du package
-        - ```npm i chart.js --save```
+        - ```$ npm i chart.js --save```
     - Importer le package dans moncv/src/main.js
         - ```import Chart from 'chart.js';```
 - [jquery-smooth-scroll](https://www.npmjs.com/package/jquery-smooth-scroll)
     - Installation du package
-        - ````npm i jquery-smooth-scroll --save```
+        - ```$ npm i jquery-smooth-scroll --save```
     - Importer le package dans moncv/src/main.js
         - ```import 'jquery-smooth-scroll';```
 - [nav-scroll-spy](https://www.npmjs.com/package/nav-scroll-spy)
     - Installation du package
-        - ```npm i nav-scroll-spy --save```
+        - ```$ npm i nav-scroll-spy --save```
     - Importer le package dans moncv/src/main.js
         - ```import NavScrollSpy from 'nav-scroll-spy';```
 
