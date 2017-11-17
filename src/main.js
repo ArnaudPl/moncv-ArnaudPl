@@ -8,7 +8,13 @@ import './style.css';
 import 'jquery-smooth-scroll';
 import Chart from 'chart.js';
 
+import NavScrollSpy from 'nav-scroll-spy';
+
 $(document).ready(() => {
+    // Init scrollspy
+    let spy = new NavScrollSpy();
+    spy.init();
+
     // Met en place les paramètres des progress-bars
     let colorClasses = ['success', 'info', 'warning', 'danger'];
 

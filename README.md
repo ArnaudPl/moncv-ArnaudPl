@@ -1,6 +1,6 @@
 # moncv-ArnaudPl
 
-> Réalisation d'un CV avec l'utilisation de webpacke et jQuery dans le cadre du cours Projet de Technologies Web donné par M. Fritscher
+> Réalisation d'un CV avec l'utilisation de webpack et jQuery dans le cadre du cours Projet de Technologies Web donné par M. Fritscher
 
 ## Installation
 
@@ -53,9 +53,19 @@ npm run deploy
 - [Timeline.css](https://codepen.io/brady_wright/pen/NNOvrW)
 - [Chart.js](https://www.npmjs.com/package/chart.js)
     - Installation du package
-        - ```npm install chart.js --save```
+        - ```npm i chart.js --save```
     - Importer le package dans moncv/src/main.js
         - ```import Chart from 'chart.js';```
+- [jquery-smooth-scroll](https://www.npmjs.com/package/jquery-smooth-scroll)
+    - Installation du package
+        - ````npm i jquery-smooth-scroll --save```
+    - Importer le package dans moncv/src/main.js
+        - ```import 'jquery-smooth-scroll';```
+- [nav-scroll-spy](https://www.npmjs.com/package/nav-scroll-spy)
+    - Installation du package
+        - ```npm i nav-scroll-spy --save```
+    - Importer le package dans moncv/src/main.js
+        - ```import NavScrollSpy from 'nav-scroll-spy';```
 
 
 
